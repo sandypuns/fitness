@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e0e0e0; padding: 24px; max-width: 900px; margin: auto; }
+  h1 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .subtitle { font-size: 0.78rem; color: #888; margin-bottom: 22px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 22px; flex-wrap: wrap; }
+  .tab { padding: 7px 16px; border-radius: 20px; border: 1px solid #333; background: #1a1a1a; color: #aaa; cursor: pointer; font-size: 0.78rem; transition: all 0.2s; }
+  .tab.active { background: #e63946; border-color: #e63946; color: #fff; font-weight: 600; }
+  .tab:hover:not(.active) { border-color: #555; color: #ddd; }
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .stats-row { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+  .stat-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 12px 16px; flex: 1; min-width: 110px; }
+  .stat-label { font-size: 0.65rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-val { font-size: 1.3rem; font-weight: 700; color: #e63946; margin-top: 2px; }
+  .stat-sub { font-size: 0.68rem; color: #555; margin-top: 1px; }
+
+  .week-grid { display: grid; grid-template-columns: 55px repeat(7, 1fr); gap: 5px; margin-bottom: 10px; }
+  .wg-label { font-size: 0.65rem; color: #666; display: flex; align-items: center; }
+  .dp { border-radius: 8px; padding: 9px 4px; text-align: center; font-size: 0.62rem; font-weight: 600; }
+  .dp.push { background: #1e2a3a; color: #4da3ff; border: 1px solid #2a3f5f; }
+  .dp.pull { background: #1e3a2a; color: #4dff9a; border: 1px solid #2a5f3f; }
+  .dp.legs { background: #3a2a1e; color: #ffaa4d; border: 1px solid #5f3f2a; }
+  .dp.hiit { background: #3a1e2a; color: #ff6fa8; border: 1px solid #5f2a3f; }
+  .dp.combo { background: #1e1e3a; color: #c084fc; border: 1px solid #3a2a5f; }
+  .dp.rest { background: #1a1a1a; color: #444; border: 1px solid #222; }
+  .dp-sub { font-size: 0.52rem; font-weight: 400; margin-top: 2px; opacity: 0.7; }
+  .legend { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .leg-item { display: flex; align-items: center; gap: 5px; font-size: 0.7rem; color: #777; }
+  .leg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  .day-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; margin-bottom: 14px; overflow: hidden; }
+  .day-header { padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .day-title { font-size: 0.88rem; font-weight: 700; }
+  .badge { font-size: 0.62rem; padding: 3px 10px; border-radius: 20px; font-weight: 600; }
+  .badge.push { background: #1e2a3a; color: #4da3ff; }
+  .badge.pull { background: #1e3a2a; color: #4dff9a; }
+  .badge.legs { background: #3a2a1e; color: #ffaa4d; }
+  .badge.hiit { background: #3a1e2a; color: #ff6fa8; }
+  .badge.combo { background: #1e1e3a; color: #c084fc; }
+  table { width: 100%; border-collapse: collapse; }
+  th { font-size: 0.62rem; color: #555; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 16px; text-align: left; border-bottom: 1px solid #222; }
+  td { font-size: 0.74rem; padding: 8px 16px; border-bottom: 1px solid #1e1e1e; color: #ccc; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1f1f1f; }
+  .ex-name { color: #e0e0e0; font-weight: 500; }
+  .ex-note { font-size: 0.63rem; color: #555; margin-top: 2px; }
+  .chip { background: #222; border-radius: 4px; padding: 2px 6px; font-size: 0.63rem; color: #777; white-space: nowrap; }
+  .section-divider { font-size: 0.65rem; color: #555; text-transform: uppercase; letter-spacing: 1px; padding: 8px 16px; background: #111; border-top: 1px solid #222; border-bottom: 1px solid #222; margin: 0; }
+
+  .info-box { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+  .info-title { font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+  .macro-row { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .macro-card { flex: 1; min-width: 80px; background: #111; border-radius: 8px; padding: 10px; text-align: center; }
+  .macro-val { font-size: 1.15rem; font-weight: 700; }
+  .macro-label { font-size: 0.63rem; color: #666; margin-top: 2px; }
+  ul.tips { list-style: none; }
+  ul.tips li { font-size: 0.74rem; color: #999; padding: 5px 0; border-bottom: 1px solid #1e1e1e; display: flex; gap: 8px; line-height: 1.5; }
+  ul.tips li:last-child { border-bottom: none; }
+  ul.tips li::before { content: "→"; color: #e63946; flex-shrink: 0; }
+
+  .incline-box { background: #111; border: 1px solid #1e3a2a; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+  .incline-title { font-size: 0.78rem; font-weight: 700; color: #4dff9a; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .incline-title::before { content: "↗"; }
+
+  .prog-row { display: grid; grid-template-columns: 75px 1fr; gap: 10px; align-items: start; margin-bottom: 12px; }
+  .prog-wk { font-size: 0.73rem; color: #888; font-weight: 700; padding-top: 2px; }
+  .prog-desc { font-size: 0.72rem; color: #bbb; line-height: 1.6; }
+  .tag { display: inline-block; font-size: 0.58rem; padding: 2px 7px; border-radius: 10px; margin-right: 4px; margin-bottom: 4px; }
+  .tag.vol { background: #1e2a3a; color: #4da3ff; }
+  .tag.int { background: #3a1e2a; color: #ff6fa8; }
+  .tag.str { background: #3a2a1e; color: #ffaa4d; }
+  .tag.peak { background: #2a1e1e; color: #e63946; }
+</style>
+</head>
+<body>
+
+<h1>30-Day Recomp Plan</h1>
+<div class="subtitle">Push / Pull / Legs · 5 days/week · Mon+Wed+Fri 55 min · Sat+Sun 90 min · 69 kg · 25% BF</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="show('overview', this)">Overview</div>
+  <div class="tab" onclick="show('push', this)">Push Day</div>
+  <div class="tab" onclick="show('pull', this)">Pull Day</div>
+  <div class="tab" onclick="show('legs', this)">Legs Day</div>
+  <div class="tab" onclick="show('weekend', this)">Weekend</div>
+  <div class="tab" onclick="show('incline', this)">Incline Walk</div>
+  <div class="tab" onclick="show('nutrition', this)">Nutrition</div>
+  <div class="tab" onclick="show('progress', this)">Timeline</div>
+</div>
+
+<!-- OVERVIEW -->
+<div id="overview" class="section active">
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-label">Current BF</div><div class="stat-val">25%</div><div class="stat-sub">~17.3 kg fat mass</div></div>
+    <div class="stat-card"><div class="stat-label">Abs Visible At</div><div class="stat-val">12–14%</div><div class="stat-sub">7–9 kg fat to lose</div></div>
+    <div class="stat-card"><div class="stat-label">Realistic ETA</div><div class="stat-val">5–6 mo</div><div class="stat-sub">At 0.5 kg fat/week</div></div>
+    <div class="stat-card"><div class="stat-label">Weekly Volume</div><div class="stat-val">5.5 hrs</div><div class="stat-sub">Up from 3.75 hrs</div></div>
+  </div>
+
+  <div style="font-size:0.72rem; color:#888; margin-bottom:10px; font-weight:600; letter-spacing:0.5px;">WEEKLY SCHEDULE — EVERY WEEK THE SAME</div>
+
+  <div class="week-grid">
+    <div class="wg-label"></div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">MON</div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">TUE</div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">WED</div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">THU</div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">FRI</div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">SAT</div>
+    <div style="font-size:0.6rem; color:#555; text-align:center; padding:4px 0;">SUN</div>
+  </div>
+  <div class="week-grid">
+    <div class="wg-label">All wks</div>
+    <div class="dp push">PUSH<div class="dp-sub">45+10 min</div></div>
+    <div class="dp rest">REST<div class="dp-sub"></div></div>
+    <div class="dp legs">LEGS<div class="dp-sub">45+10 min</div></div>
+    <div class="dp rest">REST<div class="dp-sub"></div></div>
+    <div class="dp pull">PULL<div class="dp-sub">45+10 min</div></div>
+    <div class="dp combo">PUSH+<div class="dp-sub">90 min</div></div>
+    <div class="dp combo">PULL+<div class="dp-sub">90 min</div></div>
+  </div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#4da3ff"></div>Push (Chest / Shoulders / Tris)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#4dff9a"></div>Pull (Back / Biceps / Rear Delts)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#ffaa4d"></div>Legs (Quads / Hams / Glutes)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#c084fc"></div>Lift + HIIT/Cardio (90 min)</div>
+  </div>
+
+  <div class="info-box" style="margin-top:18px;">
+    <div class="info-title">The Logic</div>
+    <div style="font-size:0.73rem; color:#999; line-height:1.7;">
+      Weekdays are <b style="color:#e0e0e0">pure lifting + 10 min incline walk</b> at the end. Simple, time-efficient, consistent. Weekends are <b style="color:#e0e0e0">55 min lifting + 35 min cardio</b> — cardio goes after weights, not before, because glycogen is depleted post-lift which forces your body to pull more from fat stores. Push is hit twice (Mon + Sat), Pull twice (Fri + Sun), Legs once with full Friday volume. No back-to-back heavy sessions — Tue and Thu are rest days providing recovery buffers around the big compound work.
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Time Breakdown Per Day</div>
+    <table>
+      <tr><th>Day</th><th>What</th><th>Lift</th><th>Cardio</th><th>Total</th></tr>
+      <tr><td>Mon</td><td>Push A</td><td>45 min</td><td>10 min incline walk</td><td>55 min</td></tr>
+      <tr><td>Tue</td><td>Rest</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>Wed</td><td>Legs</td><td>45 min</td><td>10 min incline walk</td><td>55 min</td></tr>
+      <tr><td>Thu</td><td>Rest</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>Fri</td><td>Pull A</td><td>45 min</td><td>10 min incline walk</td><td>55 min</td></tr>
+      <tr><td>Sat</td><td>Push B + HIIT</td><td>55 min</td><td>35 min HIIT + walk</td><td>90 min</td></tr>
+      <tr><td>Sun</td><td>Pull B + Zone 2</td><td>55 min</td><td>35 min incline walk</td><td>90 min</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PUSH -->
+<div id="push" class="section">
+  <div style="font-size:0.72rem; color:#888; margin-bottom:14px;">Chest · Shoulders · Triceps · Two variants: A on weekday, B on Saturday</div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#4da3ff">PUSH A — Chest Focus</div>
+      <div class="badge push">Monday · 45 min lift + 10 min incline walk</div>
+    </div>
+    <table>
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Rest</th><th>Timing</th></tr>
+      <tr><td><div class="ex-name">Warm-up: Incline Walk + Shoulder Rotations</div><div class="ex-note">5 min, 6 kmph, 8% incline</div></td><td>—</td><td>—</td><td><span class="chip">0–5 min</span></td></tr>
+      <tr><td><div class="ex-name">Barbell Bench Press</div><div class="ex-note">3 sec eccentric. Touch chest. Feet flat on floor.</div></td><td>4 × 8–10</td><td>90s</td><td><span class="chip">5–17 min</span></td></tr>
+      <tr><td><div class="ex-name">Incline DB Press</div><div class="ex-note">30–45°. Full stretch at bottom each rep.</div></td><td>3 × 10–12</td><td>75s</td><td><span class="chip">17–27 min</span></td></tr>
+      <tr><td><div class="ex-name">Seated DB Shoulder Press</div><div class="ex-note">Neutral grip. Don't lock out at top.</div></td><td>3 × 10–12</td><td>75s</td><td><span class="chip">27–35 min</span></td></tr>
+      <tr><td><div class="ex-name">Cable Lateral Raise (unilateral)</div><div class="ex-note">Lean slightly forward. Lead with elbow, not wrist.</div></td><td>3 × 15 each</td><td>45s</td><td><span class="chip">35–40 min</span></td></tr>
+      <tr><td><div class="ex-name">Tricep Rope Pushdown</div><div class="ex-note">Elbows fixed to sides. Full extension at bottom.</div></td><td>3 × 12–15</td><td>45s</td><td><span class="chip">40–45 min</span></td></tr>
+    </table>
+    <div class="section-divider">↗ Tack on immediately after — 10 min incline walk (see Incline Walk tab)</div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#c084fc">PUSH B — Shoulder Focus + HIIT</div>
+      <div class="badge combo">Saturday · 55 min lift + 35 min cardio</div>
+    </div>
+    <table>
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Rest</th><th>Timing</th></tr>
+      <tr><td><div class="ex-name">Warm-up: Incline Walk + Arm Circles</div><div class="ex-note">5 min</div></td><td>—</td><td>—</td><td><span class="chip">0–5 min</span></td></tr>
+      <tr><td><div class="ex-name">Barbell Overhead Press (Standing)</div><div class="ex-note">Brace core. Bar path straight up, slight backward lean.</div></td><td>4 × 8–10</td><td>90s</td><td><span class="chip">5–17 min</span></td></tr>
+      <tr><td><div class="ex-name">DB Flat Bench Press</div><div class="ex-note">Wider ROM than barbell. Full stretch at bottom.</div></td><td>3 × 10–12</td><td>75s</td><td><span class="chip">17–26 min</span></td></tr>
+      <tr><td><div class="ex-name">Low-to-High Cable Fly</div><div class="ex-note">Targets upper chest. Arms slightly bent throughout.</div></td><td>3 × 12–15</td><td>60s</td><td><span class="chip">26–33 min</span></td></tr>
+      <tr><td><div class="ex-name">Arnold Press</div><div class="ex-note">Rotate from neutral to pronated through full ROM.</div></td><td>3 × 12</td><td>60s</td><td><span class="chip">33–39 min</span></td></tr>
+      <tr><td><div class="ex-name">Overhead EZ Bar Tricep Extension</div><div class="ex-note">Keep elbows close to head. Full stretch at bottom.</div></td><td>3 × 12–15</td><td>45s</td><td><span class="chip">39–45 min</span></td></tr>
+      <tr><td><div class="ex-name">Dips (bodyweight or assisted)</div><div class="ex-note">Lean forward slightly for chest emphasis.</div></td><td>3 × max</td><td>60s</td><td><span class="chip">45–55 min</span></td></tr>
+    </table>
+    <div class="section-divider">↓ Straight into HIIT — Wk 1&2: 8 rounds 30s sprint/90s walk · Wk 3&4: 10 rounds 40s sprint/80s walk · then 10 min incline walk · cool-down 4 min</div>
+  </div>
+</div>
+
+<!-- PULL -->
+<div id="pull" class="section">
+  <div style="font-size:0.72rem; color:#888; margin-bottom:14px;">Back (Lats / Rhomboids / Traps) · Biceps · Rear Delts · Two variants: A on weekday, B on Sunday</div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#4dff9a">PULL A — Width & Vertical Pull</div>
+      <div class="badge pull">Friday · 45 min lift + 10 min incline walk</div>
+    </div>
+    <table>
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Rest</th><th>Timing</th></tr>
+      <tr><td><div class="ex-name">Warm-up: Band Pull-Aparts + Deadhang</div><div class="ex-note">2 min pull-aparts, 30s hang to decompress spine</div></td><td>—</td><td>—</td><td><span class="chip">0–5 min</span></td></tr>
+      <tr><td><div class="ex-name">Pull-ups or Lat Pulldown</div><div class="ex-note">If under 8 clean pull-ups, use pulldown. Overhand grip.</div></td><td>4 × 6–10</td><td>90s</td><td><span class="chip">5–17 min</span></td></tr>
+      <tr><td><div class="ex-name">Seated Cable Row (wide grip)</div><div class="ex-note">Row to sternum. Squeeze shoulder blades hard at end position.</div></td><td>3 × 10–12</td><td>75s</td><td><span class="chip">17–26 min</span></td></tr>
+      <tr><td><div class="ex-name">Single Arm DB Row</div><div class="ex-note">Brace on bench. Full stretch at bottom each rep.</div></td><td>3 × 12 each</td><td>60s</td><td><span class="chip">26–34 min</span></td></tr>
+      <tr><td><div class="ex-name">Face Pulls (rope, cable)</div><div class="ex-note">External rotation at end. Critical for shoulder health.</div></td><td>3 × 15–20</td><td>45s</td><td><span class="chip">34–39 min</span></td></tr>
+      <tr><td><div class="ex-name">EZ Bar Bicep Curl</div><div class="ex-note">No swinging. 3 sec eccentric. Supinated grip.</div></td><td>3 × 10–12</td><td>45s</td><td><span class="chip">39–45 min</span></td></tr>
+    </table>
+    <div class="section-divider">↗ Tack on immediately after — 10 min incline walk (see Incline Walk tab)</div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#c084fc">PULL B — Thickness & Hinge + Zone 2</div>
+      <div class="badge combo">Sunday · 55 min lift + 35 min Zone 2 incline</div>
+    </div>
+    <table>
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Rest</th><th>Timing</th></tr>
+      <tr><td><div class="ex-name">Warm-up: Cat-Cow + Thoracic Rotation</div><div class="ex-note">2 min mobility — don't skip on Sunday, body is stiff</div></td><td>—</td><td>—</td><td><span class="chip">0–5 min</span></td></tr>
+      <tr><td><div class="ex-name">Romanian Deadlift</div><div class="ex-note">Hinge at hips. Back flat. Feel the hamstring stretch every rep.</div></td><td>4 × 8</td><td>2 min</td><td><span class="chip">5–19 min</span></td></tr>
+      <tr><td><div class="ex-name">Chest-Supported Incline DB Row</div><div class="ex-note">Face down on incline bench. Zero momentum — strict reps only.</div></td><td>3 × 12</td><td>75s</td><td><span class="chip">19–28 min</span></td></tr>
+      <tr><td><div class="ex-name">Close Grip Lat Pulldown (V-bar)</div><div class="ex-note">Neutral or supinated. Elbows drive to ribs at bottom.</div></td><td>3 × 12–15</td><td>60s</td><td><span class="chip">28–35 min</span></td></tr>
+      <tr><td><div class="ex-name">Hammer Curl (alternating)</div><div class="ex-note">Neutral grip. Hits brachialis for arm thickness.</div></td><td>3 × 12 each</td><td>45s</td><td><span class="chip">35–41 min</span></td></tr>
+      <tr><td><div class="ex-name">Reverse Pec Deck (Rear Delt Fly)</div><div class="ex-note">Light weight, high reps. Squeeze at full stretch position.</div></td><td>3 × 15–20</td><td>30s</td><td><span class="chip">41–55 min</span></td></tr>
+    </table>
+    <div class="section-divider">↓ Straight into 35 min Zone 2 incline walk — 6 kmph, 10–12% incline, conversational pace</div>
+  </div>
+</div>
+
+<!-- LEGS -->
+<div id="legs" class="section">
+  <div style="font-size:0.72rem; color:#888; margin-bottom:14px;">Quads · Hamstrings · Glutes · Calves · Wednesday only — full volume, no split needed</div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#ffaa4d">LEGS — Quad + Posterior Chain</div>
+      <div class="badge legs">Wednesday · 45 min lift + 10 min incline walk</div>
+    </div>
+    <table>
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Rest</th><th>Timing</th></tr>
+      <tr><td><div class="ex-name">Warm-up: Treadmill Walk + Leg Swings</div><div class="ex-note">5 min easy walk + dynamic hip/quad stretches</div></td><td>—</td><td>—</td><td><span class="chip">0–5 min</span></td></tr>
+      <tr><td><div class="ex-name">Barbell Back Squat</div><div class="ex-note">Break parallel. Brace hard. Bar over mid-foot throughout.</div></td><td>4 × 8–10</td><td>2 min</td><td><span class="chip">5–20 min</span></td></tr>
+      <tr><td><div class="ex-name">Romanian Deadlift</div><div class="ex-note">Hip hinge. Slow eccentric — feel the hamstring load.</div></td><td>3 × 10–12</td><td>90s</td><td><span class="chip">20–29 min</span></td></tr>
+      <tr><td><div class="ex-name">Leg Press</div><div class="ex-note">Full ROM. Don't lock knees at top. Feet shoulder-width.</div></td><td>3 × 12–15</td><td>75s</td><td><span class="chip">29–36 min</span></td></tr>
+      <tr><td><div class="ex-name">Walking Lunges (BW or DB)</div><div class="ex-note">Upright torso. Drive through front heel. Controlled pace.</div></td><td>3 × 12 each</td><td>60s</td><td><span class="chip">36–41 min</span></td></tr>
+      <tr><td><div class="ex-name">Seated Calf Raises</div><div class="ex-note">Full stretch at bottom. Pause at top. Don't bounce.</div></td><td>3 × 15–20</td><td>45s</td><td><span class="chip">41–45 min</span></td></tr>
+    </table>
+    <div class="section-divider">↗ Tack on immediately after — 10 min incline walk (see Incline Walk tab)</div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title" style="color:#ffaa4d;">Week 3–4 Leg Variation</div>
+    <div style="font-size:0.73rem; color:#999; line-height:1.7;">
+      Replace <b style="color:#e0e0e0">Leg Press</b> with <b style="color:#e0e0e0">Hack Squat</b> for deeper quad stimulus. Add <b style="color:#e0e0e0">Seated Leg Curl</b> 3×12 after RDL. Drop walking lunges to 2 sets to stay within 45 min.
+    </div>
+  </div>
+</div>
+
+<!-- WEEKEND -->
+<div id="weekend" class="section">
+  <div style="font-size:0.72rem; color:#888; margin-bottom:14px;">Saturday: Push B + HIIT · Sunday: Pull B + Zone 2 · 90 min each</div>
+
+  <div class="info-box">
+    <div class="info-title" style="color:#c084fc;">Why Cardio Goes After Lifting, Not Before</div>
+    <div style="font-size:0.73rem; color:#999; line-height:1.7;">
+      After 55 min of lifting, your muscle glycogen (carb stores) are significantly depleted. When you then do cardio, your body shifts faster toward using fat as fuel because the easy carb source is largely gone. Doing cardio first instead burns glycogen, leaves you weaker for lifting, and reduces the fat-burn shift. Lift first, always.
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#ff6fa8">Saturday Cardio — HIIT Protocol</div>
+      <div class="badge hiit">After Push B · 35 min</div>
+    </div>
+    <table>
+      <tr><th>Phase</th><th>Duration</th><th>Speed</th><th>Incline</th></tr>
+      <tr><td><div class="ex-name">Wk 1–2: Sprint Intervals ×8</div><div class="ex-note">30s sprint → 90s walk recovery. 8 rounds = 16 min.</div></td><td>16 min</td><td>Sprint: 12–14 kmph / Walk: 5.5 kmph</td><td>1%</td></tr>
+      <tr><td><div class="ex-name">Wk 3–4: Sprint Intervals ×10</div><div class="ex-note">40s sprint → 80s walk. 10 rounds = 20 min.</div></td><td>20 min</td><td>Sprint: 14–16 kmph / Walk: 6 kmph</td><td>1%</td></tr>
+      <tr><td><div class="ex-name">Incline Walk (after sprints)</div><div class="ex-note">Wk 1–2: 15 min remaining · Wk 3–4: 11 min remaining</div></td><td>11–15 min</td><td>6 kmph</td><td>10–12%</td></tr>
+      <tr><td><div class="ex-name">Cool-down</div></td><td>4 min</td><td>4 kmph</td><td>0%</td></tr>
+    </table>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#4dff9a">Sunday Cardio — Zone 2 Incline</div>
+      <div class="badge pull">After Pull B · 35 min</div>
+    </div>
+    <table>
+      <tr><th>Phase</th><th>Duration</th><th>Speed</th><th>Incline</th></tr>
+      <tr><td><div class="ex-name">Zone 2 Incline Walk</div><div class="ex-note">Steady, brisk but fully conversational. This is fat-burning territory — not a walk in the park, not a sprint. You should be able to talk in short sentences but not sing.</div></td><td>31 min</td><td>6–6.5 kmph</td><td>10–12%</td></tr>
+      <tr><td><div class="ex-name">Cool-down</div></td><td>4 min</td><td>4 kmph</td><td>0%</td></tr>
+    </table>
+    <div style="font-size:0.7rem; color:#555; padding: 10px 16px;">Sunday is Zone 2, not HIIT — your body had HIIT on Saturday and heavy lifting on both days. Zone 2 burns fat efficiently without taxing the CNS. Think of it as active recovery with calorie burn.</div>
+  </div>
+</div>
+
+<!-- INCLINE WALK -->
+<div id="incline" class="section">
+
+  <div class="incline-box">
+    <div class="incline-title">What Is an Incline Walk?</div>
+    <div style="font-size:0.73rem; color:#999; line-height:1.8;">
+      An incline walk is walking on the treadmill at a steep uphill angle — typically <b style="color:#e0e0e0">8–12% incline at 5.5–6.5 kmph</b>. It is not jogging. It is not a casual stroll. It is a deliberate, brisk walk uphill that keeps your heart rate in the fat-burning zone (roughly 60–70% of max HR) without the joint stress of running or the CNS fatigue of HIIT.<br><br>
+      At 12% incline and 6 kmph you are working harder than most people jog at 0% incline. Your glutes, hamstrings, and calves are heavily recruited. Calorie burn is roughly <b style="color:#e0e0e0">8–10 kcal/min</b> — comparable to a light jog but with zero impact.<br><br>
+      <b style="color:#e0e0e0">The "talk test":</b> You should be able to speak a few words but not hold a full conversation comfortably. If you can chat easily, raise incline. If you can't speak at all, lower it slightly.
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-title" style="color:#4dff9a">10 Min Incline Walk — Weekday Finisher</div>
+      <div class="badge pull">Mon / Wed / Fri · Immediately after lifting</div>
+    </div>
+    <table>
+      <tr><th>Phase</th><th>Duration</th><th>Speed</th><th>Incline</th><th>Why</th></tr>
+      <tr><td><div class="ex-name">Ramp up</div><div class="ex-note">Step on, don't start at full incline</div></td><td>1 min</td><td>5.5 kmph</td><td>4–6%</td><td>Ease in</td></tr>
+      <tr><td><div class="ex-name">Main effort</div><div class="ex-note">Brisk pace, upright posture. Don't hold the handrails — it defeats the purpose.</div></td><td>8 min</td><td>6 kmph</td><td>10–12%</td><td>Fat burn + EPOC</td></tr>
+      <tr><td><div class="ex-name">Ramp down</div></td><td>1 min</td><td>5 kmph</td><td>2%</td><td>HR recovery</td></tr>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Common Mistakes on Incline Walk</div>
+    <ul class="tips">
+      <li><b style="color:#e0e0e0">Holding the handrails:</b> Completely negates the incline effect. Arms should swing freely or be loose at sides.</li>
+      <li><b style="color:#e0e0e0">Too slow at high incline:</b> 15% incline at 3 kmph is not effective. Keep pace at 5.5–6.5 kmph.</li>
+      <li><b style="color:#e0e0e0">Too much incline too soon:</b> Start at 8%, build to 12% over 2 weeks. Calf strain is common if you jump straight to 15%.</li>
+      <li><b style="color:#e0e0e0">Skipping it because you're tired:</b> 10 min. You just did 45 min of lifting. This is non-negotiable.</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Zone 2 vs HIIT Incline — What's the Difference?</div>
+    <table>
+      <tr><th></th><th>Zone 2 Incline Walk</th><th>HIIT (Saturday)</th></tr>
+      <tr><td>Heart rate</td><td>60–70% max HR</td><td>85–95% max HR on sprints</td></tr>
+      <tr><td>Feel</td><td>Brisk, sustained, can talk</td><td>Sprint: can't talk. Walk: recovering.</td></tr>
+      <tr><td>Fat vs carb burn</td><td>Primarily fat</td><td>Primarily carbs during, fat post via EPOC</td></tr>
+      <tr><td>Recovery cost</td><td>Very low</td><td>Moderate — takes 24–36 hrs</td></tr>
+      <tr><td>When used</td><td>Weekday finisher + Sunday</td><td>Saturday only</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- NUTRITION -->
+<div id="nutrition" class="section">
+  <div class="info-box">
+    <div class="info-title">Daily Macro Targets (Moderate Cut)</div>
+    <div class="macro-row">
+      <div class="macro-card"><div class="macro-val" style="color:#e63946">1900</div><div class="macro-label">Calories</div></div>
+      <div class="macro-card"><div class="macro-val" style="color:#4da3ff">145g</div><div class="macro-label">Protein</div></div>
+      <div class="macro-card"><div class="macro-val" style="color:#ffaa4d">185g</div><div class="macro-label">Carbs</div></div>
+      <div class="macro-card"><div class="macro-val" style="color:#4dff9a">55g</div><div class="macro-label">Fats</div></div>
+    </div>
+    <div style="font-size:0.68rem; color:#555; margin-bottom:12px;">TDEE now ~2250 kcal with higher activity. 300–350 kcal deficit. Slightly bump calories on Sat/Sun (+100–150 kcal carbs) to fuel the longer sessions.</div>
+    <ul class="tips">
+      <li>Protein sources: paneer, eggs, chicken breast, curd/Greek yoghurt, whey, dal, rajma, soya chunks, tofu</li>
+      <li>Pre-workout: banana + nuts or rice + curd 60–90 min before. Don't train fasted on weekend 90 min sessions.</li>
+      <li>Post-workout: whey or 4 eggs + 1–2 rotis/cup rice within 60 min of finishing</li>
+      <li>Sat/Sun: add 1 extra roti or small bowl of rice to pre-workout meal — longer sessions need the fuel</li>
+      <li>Rest days (Tue/Thu): same protein, drop carbs by ~30g if appetite is lower</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Daily Meal Structure</div>
+    <table>
+      <tr><th>Meal</th><th>What</th><th>Notes</th></tr>
+      <tr><td><div class="ex-name">Breakfast</div></td><td>Eggs + anything, moderate carbs</td><td><div class="ex-note">Oats, toast, fruit — keep it flexible</div></td></tr>
+      <tr><td><div class="ex-name">Lunch</div></td><td>Rice or roti + protein</td><td><div class="ex-note">Dal, chicken, paneer — main carb window of the day</div></td></tr>
+      <tr><td><div class="ex-name">Post-workout</div><div class="ex-note">Training days only</div></td><td>Small banana or handful of rice/roti</td><td><div class="ex-note">Within 60 min of finishing. Dinner 1.5–2 hrs after.</div></td></tr>
+      <tr><td><div class="ex-name">Dinner</div></td><td>Chicken breast + curd + nuts</td><td><div class="ex-note">Zero or near-zero carbs. Slow protein for overnight recovery.</div></td></tr>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Supplements — Minimal Effective Set</div>
+    <ul class="tips">
+      <li><b style="color:#e0e0e0">Creatine monohydrate</b> — 5g/day, any time. Non-negotiable for recomp.</li>
+      <li><b style="color:#e0e0e0">Whey protein</b> — only if food protein falls below 120g. Not a magic powder.</li>
+      <li><b style="color:#e0e0e0">Vitamin D3 + K2</b> — 2000 IU D3 daily. Most urban Indians are deficient.</li>
+      <li><b style="color:#e0e0e0">Magnesium glycinate</b> — 300mg before bed. Improves sleep quality and recovery.</li>
+      <li>Skip fat burners, BCAAs, pre-workout — not needed, won't move the needle at this stage.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div id="progress" class="section">
+  <div class="info-box">
+    <div class="info-title">Month Progression — How the 4 Weeks Build</div>
+    <div class="prog-row">
+      <div class="prog-wk">Week 1</div>
+      <div class="prog-desc">
+        <span class="tag vol">Foundation</span><span class="tag int">60–70% load</span><br>
+        Learn movement patterns. Moderate weights — form over ego, especially squat, deadlift, bench. Don't go to failure. Log starting weights on every exercise. HIIT at 80% effort max.
+      </div>
+    </div>
+    <div class="prog-row">
+      <div class="prog-wk">Week 2</div>
+      <div class="prog-desc">
+        <span class="tag vol">Volume</span><span class="tag int">Load ↑</span><br>
+        Add 2.5–5 kg to compounds where Week 1 felt comfortable. Last set of each exercise: 1–2 reps from failure. Beat Week 1 sprint speeds by 0.5–1 kmph on HIIT.
+      </div>
+    </div>
+    <div class="prog-row">
+      <div class="prog-wk">Week 3</div>
+      <div class="prog-desc">
+        <span class="tag str">Strength</span><span class="tag int">Intensity ↑</span><br>
+        75–80% max on compounds. Add 1 working set to bench, squat, RDL. Upgrade HIIT to 10-round protocol. Incline walk bumps to 12% on weekday finishers.
+      </div>
+    </div>
+    <div class="prog-row">
+      <div class="prog-wk">Week 4</div>
+      <div class="prog-desc">
+        <span class="tag peak">Peak</span><span class="tag int">Max Effort</span><br>
+        Heaviest week. Leave 1 rep in tank on all sets. At month end: measure waist, chest, upper arms. Log all compound lift maxes for Month 2 baseline.
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Realistic Timeline from 25% BF — No BS</div>
+    <div style="font-size:0.7rem; color:#555; margin-bottom:12px;">With the updated 5-day plan you're burning more per week. Realistic fat loss: 0.5–0.75 kg/week. Still need to lose 7–9 kg of fat to see abs. That math hasn't changed.</div>
+    <ul class="tips">
+      <li><b style="color:#e0e0e0">Month 1 (25% → 22–23% BF):</b> Face and arms visibly leaner. Waist down 2–4 cm. Shoulders more defined. Scale drops 1.5–2.5 kg. No abs — belly fat is last.</li>
+      <li><b style="color:#e0e0e0">Month 2 (22% → 19–20% BF):</b> Chest and back definition appearing. Clothes fit differently. Strength on compounds up 15–25%. Still no visible abs.</li>
+      <li><b style="color:#e0e0e0">Month 3–4 (19% → 15–16% BF):</b> Upper abs in good lighting. V-shape emerging. Arms and shoulders look genuinely athletic. First real before/after moment.</li>
+      <li><b style="color:#e0e0e0">Month 5–6 (15% → 12–13% BF):</b> Clear abs in normal lighting. Veins on forearms. Legitimately lean. Most people's definition of "ripped."</li>
+      <li><b style="color:#e0e0e0">Month 7–9 (sub-12% BF):</b> Stage-lean. Lower abs visible. Diet needs to be dialled in tightly.</li>
+      <li>Track waist circumference weekly. Scale lies — belly fat goes last. Waist shrink is the real signal.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function show(id, el) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>
