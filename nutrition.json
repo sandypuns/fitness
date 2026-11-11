@@ -2,11 +2,13 @@
   "profile": {
     "goal": "Body recomposition",
     "targets": {
-      "calories": 2000,
-      "protein": 140,
-      "carbs": 210,
-      "fat": 65,
-      "note": "Starting targets for tracking only; review with dietician and adjust using weight trend, hunger, training performance and recovery."
+      "calories": 2140,
+      "protein": 153,
+      "carbs": 207,
+      "fat": 79,
+      "fibre": 26,
+      "source": "Coach plan uploaded 11 November 2026",
+      "note": "Coach-provided targets. Use as the current plan reference; review actual progress and any adjustments with your coach."
     }
   },
   "days": [
@@ -105,7 +107,75 @@
         }
       ],
       "workouts": [],
-      "notes": "Initial day log created from meal photos and descriptions in ChatGPT. Running estimate before dinner: ~1,855 kcal; protein ~98 g. Dinner plan discussed (not yet logged): grilled chicken with rice/banana after boxing."
+      "notes": "Initial day log created from meal photos and descriptions in ChatGPT. Running estimate before dinner: ~1,855 kcal; protein ~98 g. Dinner plan discussed (not yet logged): grilled chicken with rice/banana after boxing.",
+      "nextMealSuggestion": {
+        "meal": "Dinner",
+        "title": "Grilled chicken + vegetables",
+        "items": [
+          "170 g cooked grilled chicken breast",
+          "200 g non-starchy vegetables or salad",
+          "Cook without additional oil, or measure any oil used"
+        ],
+        "estimate": "Approximately 310 kcal · 55 g protein · 10 g carbs · 7 g fat",
+        "rationale": "Your photo-based log is around 1,855 kcal and 98 g protein so far. This dinner brings the day close to the coach's 2,140 kcal and 153 g protein reference without adding much more fat.",
+        "optional": "If you still have boxing to do or feel you need extra training fuel, add a small portion of cooked rice or a banana. Treat that as an activity-based addition, not a mandatory extra."
+      }
     }
-  ]
+  ],
+  "coachPlan": {
+    "period": "9 October 2026 – 7 January 2027",
+    "dailyTargets": {
+      "calories": 2140,
+      "protein": 153,
+      "carbs": 207,
+      "fat": 79,
+      "fibre": 26
+    },
+    "mealStructure": [
+      {
+        "meal": "Pre-workout",
+        "detail": "Banana 100 g",
+        "kcal": 96
+      },
+      {
+        "meal": "Breakfast",
+        "detail": "Oats 30 g, whey 1 scoop, almonds 10 g, toned milk 150 ml, banana 80 g",
+        "kcal": 467
+      },
+      {
+        "meal": "Mid-day snack",
+        "detail": "Instant coffee with milk and sugar, 150 ml",
+        "kcal": 80
+      },
+      {
+        "meal": "Lunch",
+        "detail": "2 rotis, chicken curry 150 g, vegetables/salad 200 g, curd 150 g, cooking oil 15 ml",
+        "kcal": 718
+      },
+      {
+        "meal": "Evening snack",
+        "detail": "Whey 1 scoop",
+        "kcal": 126
+      },
+      {
+        "meal": "Dinner",
+        "detail": "Cooked rice 150 g, chicken breast 150 g, curd 150 g, vegetables/salad 200 g, cooking oil 10 ml",
+        "kcal": 653
+      }
+    ],
+    "trainingSplit": [
+      "Day 1: Cardio + upper push",
+      "Day 2: Cardio + lower body",
+      "Day 3: Cardio + core and arms",
+      "Day 4: Cardio + upper pull",
+      "Day 5: Cardio + legs"
+    ],
+    "reviewFlags": [
+      "Workout split differs from the existing website plan: coach has two lower-body days and one separate arms/core day; website has two push, one legs and two pull days. Do not combine both programs without coach approval.",
+      "The PDF cover and progress tracker show different starting-weight records. Confirm the official baseline with the coach; weight is intentionally not shown on this public dashboard.",
+      "The plan includes two whey scoops per day, while its supplement page says no supplements are prescribed. Confirm whether whey is a planned food item or optional.",
+      "The plan allocates 15 ml oil at lunch and 10 ml at dinner. Confirm whether lunch oil is additional to the fat already included in the chicken curry entry.",
+      "Resistance-exercise RPE, rest periods, progression rules and weekly rest-day placement are not specified in the PDF."
+    ]
+  }
 }
