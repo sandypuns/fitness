@@ -31,3 +31,6 @@ Calories and macros are estimated from meal photos. Sodium, sugars, saturated fa
 
 ## Daily photo gallery
 Meal and drink photos are stored as compressed thumbnails under `photos/YYYY-MM-DD/` and referenced from the corresponding date in `nutrition.json`. The dashboard gallery changes with the selected date. Thumbnails are indicative, not high-resolution originals.
+
+
+Latest dashboard update: the nutrient-check panel has been removed from the page, and daily photo thumbnails are shown for each date with uploaded images.
