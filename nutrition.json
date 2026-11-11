@@ -45,12 +45,12 @@
         {
           "meal": "Breakfast",
           "item": "Whey protein — 1.5 scoops",
-          "calories": 180,
+          "calories": 189,
           "protein": 36,
-          "carbs": 4,
-          "fat": 2,
+          "carbs": 4.5,
+          "fat": 3,
           "confidence": "high",
-          "notes": "Approximate brand-independent estimate.",
+          "notes": "1.5 scoops calculated using the coach plan's per-scoop values: 126 kcal, 24 g protein, 3 g carbs and 2 g fat per scoop.",
           "sodiumMg": null,
           "freeSugarG": null,
           "saturatedFatG": null,
@@ -179,7 +179,7 @@
         }
       ],
       "workouts": [],
-      "notes": "Initial day log created from meal photos and descriptions in ChatGPT. Running estimate before dinner: ~1,855 kcal; protein ~98 g. Dinner plan discussed (not yet logged): grilled chicken with rice/banana after boxing. Two 300 ml Diet Coke cans logged in total today.",
+      "notes": "Food log based on photos and descriptions. Current logged estimate: 1864 kcal; 98 g protein; 197.5 g carbs; 74 g fat. Two Diet Coke cans logged. Planned meals are not counted until confirmed consumed.",
       "nextMealSuggestion": {
         "meal": "Dinner",
         "title": "Grilled chicken + vegetables",
@@ -189,14 +189,14 @@
           "Cook without additional oil, or measure any oil used"
         ],
         "estimate": "Approximately 310 kcal · 55 g protein · 10 g carbs · 7 g fat",
-        "rationale": "Your photo-based log is around 1,855 kcal and 98 g protein so far. This dinner brings the day close to the coach's 2,140 kcal and 153 g protein reference without adding much more fat.",
+        "rationale": "Your current photo-based log is approximately 1864 kcal and 98 g protein. The suggested dinner adds about 310 kcal and 55 g protein, bringing the estimated day close to the coach's daily reference.",
         "optional": "If you still have boxing to do or feel you need extra training fuel, add a small portion of cooked rice or a banana. Treat that as an activity-based addition, not a mandatory extra."
       },
       "steps": null,
       "sleepHours": null,
       "sleepNotes": "",
       "activityNotes": "",
-      "nutrientNotes": "Nutrient coverage is partial: sodium, free sugars, saturated fat and fibre from mixed meals are not yet reliably quantified from the photos. The two Diet Coke cans contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were double shots, estimated day caffeine would be closer to 312 mg. Food-label and café values vary."
+      "nutrientNotes": "Important: nutrient values shown below are incomplete when meal entries are not quantified. The Diet Coke entries contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were doubles, the day estimate would be closer to 312 mg. Mixed-dish sodium, free sugars, saturated fat and fibre have not yet been reliably quantified."
     }
   ],
   "coachPlan": {
