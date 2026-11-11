@@ -20,3 +20,7 @@ The repository is public. Anyone can view and copy its files. The nutrition dash
 
 ## Estimates
 Calories and macros are estimates from meal photos and descriptions. Mixed dishes, cooking fats, brands and serving sizes create uncertainty. Targets are provisional and should be reviewed with a dietician.
+
+
+## Coach plan reference
+The current nutrition dashboard uses the uploaded coach plan targets: 2,140 kcal, 153 g protein, 207 g carbohydrates, 79 g fat and 26 g fibre. It also shows a concise discrepancy checklist and meal suggestions that advance from breakfast to lunch to dinner based on logged meals.
