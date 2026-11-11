@@ -196,7 +196,29 @@
       "sleepHours": null,
       "sleepNotes": "",
       "activityNotes": "",
-      "nutrientNotes": "Important: nutrient values shown below are incomplete when meal entries are not quantified. The Diet Coke entries contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were doubles, the day estimate would be closer to 312 mg. Mixed-dish sodium, free sugars, saturated fat and fibre have not yet been reliably quantified."
+      "nutrientNotes": "Important: nutrient values shown below are incomplete when meal entries are not quantified. The Diet Coke entries contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were doubles, the day estimate would be closer to 312 mg. Mixed-dish sodium, free sugars, saturated fat and fibre have not yet been reliably quantified.",
+      "photos": [
+        {
+          "path": "photos/2026-11-11/paratha.jpg",
+          "meal": "Breakfast",
+          "caption": "Gobi paratha — meal photo"
+        },
+        {
+          "path": "photos/2026-11-11/biryani-meal.jpg",
+          "meal": "Lunch",
+          "caption": "Chicken biryani with vanilla ice cream — before eating"
+        },
+        {
+          "path": "photos/2026-11-11/biryani-leftovers.jpg",
+          "meal": "Lunch",
+          "caption": "Leftover rice in the tray after the meal"
+        },
+        {
+          "path": "photos/2026-11-11/diet-coke-label.jpg",
+          "meal": "Drinks",
+          "caption": "Diet Coke 300 ml — can label"
+        }
+      ]
     }
   ],
   "coachPlan": {

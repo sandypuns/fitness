@@ -27,3 +27,7 @@ The repository is public. The dashboard displays current weight because the user
 
 ## Accuracy
 Calories and macros are estimated from meal photos. Sodium, sugars, saturated fat and fibre are especially difficult to infer from mixed dishes without recipes, brands or package labels. Unknown values remain blank rather than being treated as zero.
+
+
+## Daily photo gallery
+Meal and drink photos are stored as compressed thumbnails under `photos/YYYY-MM-DD/` and referenced from the corresponding date in `nutrition.json`. The dashboard gallery changes with the selected date. Thumbnails are indicative, not high-resolution originals.
