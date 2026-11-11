@@ -8,8 +8,11 @@
       "fat": 79,
       "fibre": 26,
       "source": "Coach plan uploaded 11 November 2026",
-      "note": "Coach-provided targets. Use as the current plan reference; review actual progress and any adjustments with your coach."
-    }
+      "note": "Coach plan is the source of truth for nutrition targets."
+    },
+    "currentWeightKg": 70.1,
+    "weightSource": "User-confirmed current weight on 11 November 2026",
+    "weightVisibility": "public dashboard"
   },
   "days": [
     {
@@ -119,7 +122,11 @@
         "estimate": "Approximately 310 kcal · 55 g protein · 10 g carbs · 7 g fat",
         "rationale": "Your photo-based log is around 1,855 kcal and 98 g protein so far. This dinner brings the day close to the coach's 2,140 kcal and 153 g protein reference without adding much more fat.",
         "optional": "If you still have boxing to do or feel you need extra training fuel, add a small portion of cooked rice or a banana. Treat that as an activity-based addition, not a mandatory extra."
-      }
+      },
+      "steps": null,
+      "sleepHours": null,
+      "sleepNotes": "",
+      "activityNotes": ""
     }
   ],
   "coachPlan": {
@@ -170,12 +177,14 @@
       "Day 4: Cardio + upper pull",
       "Day 5: Cardio + legs"
     ],
-    "reviewFlags": [
-      "Workout split differs from the existing website plan: coach has two lower-body days and one separate arms/core day; website has two push, one legs and two pull days. Do not combine both programs without coach approval.",
-      "The PDF cover and progress tracker show different starting-weight records. Confirm the official baseline with the coach; weight is intentionally not shown on this public dashboard.",
-      "The plan includes two whey scoops per day, while its supplement page says no supplements are prescribed. Confirm whether whey is a planned food item or optional.",
-      "The plan allocates 15 ml oil at lunch and 10 ml at dinner. Confirm whether lunch oil is additional to the fat already included in the chicken curry entry.",
-      "Resistance-exercise RPE, rest periods, progression rules and weekly rest-day placement are not specified in the PDF."
-    ]
+    "reviewFlags": [],
+    "followingRules": [
+      "Coach plan is the source of truth for daily nutrition targets and meal structure.",
+      "Current weight is 70.1 kg, as confirmed by the user.",
+      "Use two whey scoops consistently each day: one with breakfast and one as the evening snack. The coach's 'no supplements' note refers to other external supplements, not these planned whey servings.",
+      "For photo-based food logs, estimate cooking oil as part of the dish. Do not add a separate oil entry unless the user explicitly confirms it is additional.",
+      "Do not infer adherence from the prescribed training split. Log the actual workout, step count and sleep duration shared by the user at the end of each day."
+    ],
+    "dailyWheyProtocol": "2 scoops daily: 1 scoop at breakfast + 1 scoop as the evening snack."
   }
 }
