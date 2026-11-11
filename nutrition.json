@@ -178,7 +178,13 @@
           "notes": "Assumed Indian 300 ml can: about 8.3 mg sodium and 10 mg caffeine per 100 ml; 0 g sugar. Label-based estimate."
         }
       ],
-      "workouts": [],
+      "workouts": [
+        {
+          "activity": "Kickboxing",
+          "durationMinutes": 65,
+          "details": "Manually logged in fitness app at 8:05 PM; app-reported 518 kcal burned, average heart rate 148 bpm, cardio load 114, 117 zone minutes (daily goal completed): 13 minutes moderate, 52 minutes vigorous and peak."
+        }
+      ],
       "notes": "Food log based on photos and descriptions. Current logged estimate: 1864 kcal; 98 g protein; 197.5 g carbs; 74 g fat. Two Diet Coke cans logged. Planned meals are not counted until confirmed consumed.",
       "nextMealSuggestion": {
         "meal": "Dinner",
@@ -195,7 +201,7 @@
       "steps": null,
       "sleepHours": null,
       "sleepNotes": "",
-      "activityNotes": "",
+      "activityNotes": "Kickboxing metrics are the fitness app's own estimates from a manually logged entry. Steps and sleep not logged yet.",
       "nutrientNotes": "Important: nutrient values shown below are incomplete when meal entries are not quantified. The Diet Coke entries contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were doubles, the day estimate would be closer to 312 mg. Mixed-dish sodium, free sugars, saturated fat and fibre have not yet been reliably quantified.",
       "photos": [
         {
