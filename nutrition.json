@@ -182,6 +182,14 @@
         {
           "activity": "Kickboxing",
           "durationMinutes": 65,
+          "energyKcal": 518,
+          "avgHeartRate": 148,
+          "cardioLoad": 114,
+          "zoneMinutes": 117,
+          "zoneModerateMin": 13,
+          "zoneVigorousPeakMin": 52,
+          "zoneGoalCompleted": true,
+          "source": "Manually logged in fitness app at 8:05 PM",
           "details": "Manually logged in fitness app at 8:05 PM; app-reported 518 kcal burned, average heart rate 148 bpm, cardio load 114, 117 zone minutes (daily goal completed): 13 minutes moderate, 52 minutes vigorous and peak."
         }
       ],
