@@ -1,8 +1,6 @@
 {
   "profile": {
     "goal": "Body recomposition",
-    "currentWeightKg": 68,
-    "weightVisibility": "private",
     "targets": {
       "calories": 2000,
       "protein": 140,
