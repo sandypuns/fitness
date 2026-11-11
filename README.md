@@ -1,34 +1,20 @@
 # Fitness & Nutrition
 
-This repository contains:
-- `index.html`: existing workout-plan page, left unchanged
-- `nutrition.html`: public, read-only nutrition dashboard
-- `nutrition.json`: source-of-truth food log, coach targets and daily activity log
+Public nutrition and activity dashboard:
+https://sandypuns.github.io/fitness/nutrition.html
 
-## Public dashboard
-`https://sandypuns.github.io/fitness/nutrition.html`
+## Coach-led nutrition target
+2,140 kcal · 153 g protein · 207 g carbs · 79 g fat · 26 g fibre.
+Two whey scoops daily: one with breakfast and one as the evening snack.
+Current weight: 70.1 kg.
 
-GitHub Pages publishes from `main` and the repository root.
+## Logging
+Send meal photos/descriptions in ChatGPT. Food estimates, cooking oil included within dishes, daily activity, steps and sleep are maintained in `nutrition.json`.
 
-## Coach plan is the nutrition source of truth
-Daily targets: **2,140 kcal, 153 g protein, 207 g carbohydrates, 79 g fat and 26 g fibre**.
-
-Daily whey protocol: **2 scoops**, one with breakfast and one as the evening snack. These are part of the coach's meal plan; the "no supplements" note refers to other external supplements.
-
-Current weight: **70.1 kg** (user-confirmed 11 November 2026).
-
-## Logging workflow
-Send meal photos and descriptions in the ChatGPT Fitness and Diet conversation. Food estimates will be added to `nutrition.json` and `nutrition.html` will be refreshed. Cooking oil is estimated as part of the dish; it is not added again as a separate entry unless the user confirms it is additional.
-
-At the end of each day, share:
-- The workout actually completed (and duration or other stats, when available)
-- Step count
-- Sleep duration (and optional sleep notes)
-
-These are recorded in that date's `workouts`, `steps`, `sleepHours`, `sleepNotes` and `activityNotes` fields. The dashboard never assumes a workout from the planned schedule.
+Additional nutrient monitoring includes sodium, free/added sugars, saturated fat, fibre and caffeine. Values not reasonably estimable from photos are stored as unknown rather than zero. Nutrient watch limits are broad adult reference points, not individualized medical advice. Sodium uses the WHO reference of less than 2,000 mg/day; free sugars under 10% of energy (ideally 5%); saturated fat under 10% of energy; fibre follows the coach's 26 g/day; caffeine uses the FDA reference of up to 400 mg/day for most adults.
 
 ## Privacy
-This repository is public. Anyone can view and copy its files. The nutrition dashboard intentionally displays the current weight because the user requested it. Avoid adding sensitive medical information or private notes.
+The repository is public. The dashboard displays current weight because the user has requested it. Avoid adding medical details or other sensitive data.
 
-## Estimates
-Calories and macros are estimates from meal photos and descriptions. Mixed dishes, cooking fats, brands and serving sizes create uncertainty. Meal suggestions remain guidance based on the coach's plan and the food already logged; confirm substantive changes with your coach.
+## Accuracy
+Food values from photos are estimates. Mixed dishes, salt, sauces, cooking fats, brands and serving sizes can create large uncertainty. Partial nutrient subtotals are labelled as such and are not treated as complete daily totals.
