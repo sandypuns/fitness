@@ -12,7 +12,16 @@
     },
     "currentWeightKg": 70.1,
     "weightSource": "User-confirmed current weight on 11 November 2026",
-    "weightVisibility": "public dashboard"
+    "weightVisibility": "public dashboard",
+    "nutrientGuidance": {
+      "sodiumMgMax": 2000,
+      "freeSugarGMax": 53.5,
+      "freeSugarGPreferred": 27,
+      "saturatedFatGMax": 24,
+      "fibreGTarget": 26,
+      "caffeineMgMax": 400,
+      "note": "General adult reference values. The fibre target is from the coach plan; other thresholds are broad public-health reference points, not personalized prescriptions."
+    }
   },
   "days": [
     {
@@ -26,7 +35,12 @@
           "carbs": 105,
           "fat": 40,
           "confidence": "medium",
-          "notes": "Portion and oil/ghee are uncertain."
+          "notes": "Portion and oil/ghee are uncertain.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Breakfast",
@@ -36,7 +50,12 @@
           "carbs": 4,
           "fat": 2,
           "confidence": "high",
-          "notes": "Approximate brand-independent estimate."
+          "notes": "Approximate brand-independent estimate.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Breakfast",
@@ -46,7 +65,12 @@
           "carbs": 12,
           "fat": 5,
           "confidence": "medium",
-          "notes": "Depends on brand and fat percentage."
+          "notes": "Depends on brand and fat percentage.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Breakfast",
@@ -56,7 +80,12 @@
           "carbs": 1,
           "fat": 0,
           "confidence": "high",
-          "notes": "Assumed no sugar or milk."
+          "notes": "Caffeine estimated at about 63 mg per single 30 ml espresso shot; assumes one shot per cup. Actual café espresso can vary substantially.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": 126
         },
         {
           "meal": "Breakfast",
@@ -66,7 +95,12 @@
           "carbs": 0,
           "fat": 0,
           "confidence": "high",
-          "notes": "No meaningful calories."
+          "notes": "No meaningful calories.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Lunch",
@@ -76,7 +110,12 @@
           "carbs": 55,
           "fat": 18,
           "confidence": "medium",
-          "notes": "Photo-based estimate; rice quantity revised after showing leftovers."
+          "notes": "Photo-based estimate; rice quantity revised after showing leftovers.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Lunch",
@@ -86,7 +125,12 @@
           "carbs": 17,
           "fat": 7,
           "confidence": "medium",
-          "notes": "Photo-based estimate."
+          "notes": "Photo-based estimate.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Lunch",
@@ -96,21 +140,46 @@
           "carbs": 3,
           "fat": 1,
           "confidence": "medium",
-          "notes": "Photo-based estimate."
+          "notes": "Photo-based estimate.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         },
         {
           "meal": "Drink",
-          "item": "Zero-sugar cola — 300 ml",
+          "item": "Diet Coke — 300 ml (can 1)",
           "calories": 0,
           "protein": 0,
           "carbs": 0,
           "fat": 0,
           "confidence": "high",
-          "notes": "Assumed zero-sugar formulation."
+          "notes": "Assumed Indian 300 ml can: about 8.3 mg sodium and 10 mg caffeine per 100 ml; 0 g sugar. Label-based estimate.",
+          "sodiumMg": 25,
+          "freeSugarG": 0,
+          "saturatedFatG": 0,
+          "fibreG": 0,
+          "caffeineMg": 30
+        },
+        {
+          "meal": "Drink",
+          "item": "Diet Coke — 300 ml (can 2)",
+          "calories": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0,
+          "sodiumMg": 25,
+          "freeSugarG": 0,
+          "saturatedFatG": 0,
+          "fibreG": 0,
+          "caffeineMg": 30,
+          "confidence": "high",
+          "notes": "Assumed Indian 300 ml can: about 8.3 mg sodium and 10 mg caffeine per 100 ml; 0 g sugar. Label-based estimate."
         }
       ],
       "workouts": [],
-      "notes": "Initial day log created from meal photos and descriptions in ChatGPT. Running estimate before dinner: ~1,855 kcal; protein ~98 g. Dinner plan discussed (not yet logged): grilled chicken with rice/banana after boxing.",
+      "notes": "Initial day log created from meal photos and descriptions in ChatGPT. Running estimate before dinner: ~1,855 kcal; protein ~98 g. Dinner plan discussed (not yet logged): grilled chicken with rice/banana after boxing. Two 300 ml Diet Coke cans logged in total today.",
       "nextMealSuggestion": {
         "meal": "Dinner",
         "title": "Grilled chicken + vegetables",
@@ -126,7 +195,8 @@
       "steps": null,
       "sleepHours": null,
       "sleepNotes": "",
-      "activityNotes": ""
+      "activityNotes": "",
+      "nutrientNotes": "Nutrient coverage is partial: sodium, free sugars, saturated fat and fibre from mixed meals are not yet reliably quantified from the photos. Diet Coke figures are label-based; espresso caffeine is a single-shot assumption."
     }
   ],
   "coachPlan": {
