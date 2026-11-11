@@ -1,0 +1,113 @@
+{
+  "profile": {
+    "goal": "Body recomposition",
+    "currentWeightKg": 68,
+    "weightVisibility": "private",
+    "targets": {
+      "calories": 2000,
+      "protein": 140,
+      "carbs": 210,
+      "fat": 65,
+      "note": "Starting targets for tracking only; review with dietician and adjust using weight trend, hunger, training performance and recovery."
+    }
+  },
+  "days": [
+    {
+      "date": "2026-11-11",
+      "entries": [
+        {
+          "meal": "Breakfast",
+          "item": "Gobi paratha — 3 pieces (photo estimate)",
+          "calories": 850,
+          "protein": 15,
+          "carbs": 105,
+          "fat": 40,
+          "confidence": "medium",
+          "notes": "Portion and oil/ghee are uncertain."
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Whey protein — 1.5 scoops",
+          "calories": 180,
+          "protein": 36,
+          "carbs": 4,
+          "fat": 2,
+          "confidence": "high",
+          "notes": "Approximate brand-independent estimate."
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Lactose-free milk — 250 ml",
+          "calories": 120,
+          "protein": 8,
+          "carbs": 12,
+          "fat": 5,
+          "confidence": "medium",
+          "notes": "Depends on brand and fat percentage."
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Espresso — 2 cups",
+          "calories": 5,
+          "protein": 0,
+          "carbs": 1,
+          "fat": 0,
+          "confidence": "high",
+          "notes": "Assumed no sugar or milk."
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Creatine — 1 serving",
+          "calories": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0,
+          "confidence": "high",
+          "notes": "No meaningful calories."
+        },
+        {
+          "meal": "Lunch",
+          "item": "Chicken biryani — eaten portion, excluding leftover rice",
+          "calories": 540,
+          "protein": 35,
+          "carbs": 55,
+          "fat": 18,
+          "confidence": "medium",
+          "notes": "Photo-based estimate; rice quantity revised after showing leftovers."
+        },
+        {
+          "meal": "Lunch",
+          "item": "Vanilla ice cream — small serving",
+          "calories": 135,
+          "protein": 2,
+          "carbs": 17,
+          "fat": 7,
+          "confidence": "medium",
+          "notes": "Photo-based estimate."
+        },
+        {
+          "meal": "Lunch",
+          "item": "Raita — small serving",
+          "calories": 25,
+          "protein": 2,
+          "carbs": 3,
+          "fat": 1,
+          "confidence": "medium",
+          "notes": "Photo-based estimate."
+        },
+        {
+          "meal": "Drink",
+          "item": "Zero-sugar cola — 300 ml",
+          "calories": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0,
+          "confidence": "high",
+          "notes": "Assumed zero-sugar formulation."
+        }
+      ],
+      "workouts": [],
+      "notes": "Initial day log created from meal photos and descriptions in ChatGPT. Running estimate before dinner: ~1,855 kcal; protein ~98 g. Dinner plan discussed (not yet logged): grilled chicken with rice/banana after boxing."
+    }
+  ]
+}
