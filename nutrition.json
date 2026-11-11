@@ -196,7 +196,7 @@
       "sleepHours": null,
       "sleepNotes": "",
       "activityNotes": "",
-      "nutrientNotes": "Nutrient coverage is partial: sodium, free sugars, saturated fat and fibre from mixed meals are not yet reliably quantified from the photos. Diet Coke figures are label-based; espresso caffeine is a single-shot assumption."
+      "nutrientNotes": "Nutrient coverage is partial: sodium, free sugars, saturated fat and fibre from mixed meals are not yet reliably quantified from the photos. The two Diet Coke cans contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were double shots, estimated day caffeine would be closer to 312 mg. Food-label and café values vary."
     }
   ],
   "coachPlan": {
