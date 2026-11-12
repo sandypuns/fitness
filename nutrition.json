@@ -76,9 +76,9 @@
       "workouts": [],
       "notes": "Breakfast logged from description (no photos yet): whey protein, creatine and Amul lactose-free milk. Further meals will be added as they are logged during the day.",
       "steps": null,
-      "sleepHours": null,
-      "sleepNotes": "",
-      "activityNotes": "",
+      "sleepHours": 5.55,
+      "sleepNotes": "Reported as 5 h 33 min",
+      "activityNotes": "Sleep logged; workout and steps not logged yet.",
       "nutrientNotes": "Nutrient values below are incomplete for this day: the whey brand is unknown, so sodium and saturated fat are not estimated for the breakfast entries.",
       "photos": []
     },
@@ -309,10 +309,10 @@
         "rationale": "Your current photo-based log is approximately 1864 kcal and 98 g protein. The suggested dinner adds about 310 kcal and 55 g protein, bringing the estimated day close to the coach's daily reference.",
         "optional": "If you still have boxing to do or feel you need extra training fuel, add a small portion of cooked rice or a banana. Treat that as an activity-based addition, not a mandatory extra."
       },
-      "steps": null,
+      "steps": 7543,
       "sleepHours": null,
       "sleepNotes": "",
-      "activityNotes": "Kickboxing metrics are the fitness app's own estimates from a manually logged entry. Steps and sleep not logged yet.",
+      "activityNotes": "Kickboxing metrics are the fitness app's own estimates from a manually logged entry. Sleep not logged yet.",
       "nutrientNotes": "Important: nutrient values shown below are incomplete when meal entries are not quantified. The Diet Coke entries contribute about 50 mg sodium, 60 mg caffeine and 0 g sugar in total. Espresso caffeine is estimated at 126 mg assuming two single shots; if both cups were doubles, the day estimate would be closer to 312 mg. Mixed-dish sodium, free sugars, saturated fat and fibre have not yet been reliably quantified.",
       "photos": [
         {
