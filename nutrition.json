@@ -71,6 +71,36 @@
           "saturatedFatG": null,
           "fibreG": 0,
           "caffeineMg": null
+        },
+        {
+          "meal": "Drink",
+          "item": "Espresso — 2 shots",
+          "calories": 5,
+          "protein": 0,
+          "carbs": 1,
+          "fat": 0,
+          "confidence": "high",
+          "notes": "About 63 mg caffeine per 30 ml shot; user confirmed 2 shots.",
+          "sodiumMg": null,
+          "freeSugarG": 0,
+          "saturatedFatG": 0,
+          "fibreG": 0,
+          "caffeineMg": 126
+        },
+        {
+          "meal": "Drink",
+          "item": "Cappuccino — 1 cup with about 50 ml milk",
+          "calories": 30,
+          "protein": 2,
+          "carbs": 2,
+          "fat": 2,
+          "confidence": "medium",
+          "notes": "Milk assumed to be the same Amul Lactose Free as logged at breakfast (59 kcal per 100 ml); unsweetened assumed. Espresso shots in the cappuccino not specified, so its caffeine is not estimated.",
+          "sodiumMg": null,
+          "freeSugarG": 0,
+          "saturatedFatG": null,
+          "fibreG": 0,
+          "caffeineMg": null
         }
       ],
       "workouts": [],
