@@ -25,6 +25,64 @@
   },
   "days": [
     {
+      "date": "2026-11-12",
+      "entries": [
+        {
+          "meal": "Breakfast",
+          "item": "Whey protein — 1.5 scoops",
+          "calories": 180,
+          "protein": 36,
+          "carbs": 3,
+          "fat": 2,
+          "confidence": "medium",
+          "notes": "Brand and scoop size not specified; estimate uses a typical 30 g scoop at about 120 kcal and 24 g protein. Generic whey estimate, not label-based.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": 0,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Creatine — 1 serving (5 g)",
+          "calories": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0,
+          "confidence": "high",
+          "notes": "Standard creatine monohydrate serving; no meaningful calories or macronutrients.",
+          "sodiumMg": null,
+          "freeSugarG": 0,
+          "saturatedFatG": 0,
+          "fibreG": 0,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Amul Lactose Free Milk — 250 ml carton",
+          "calories": 148,
+          "protein": 8,
+          "carbs": 12,
+          "fat": 8,
+          "confidence": "high",
+          "notes": "Label-based: 59 kcal, 3 g protein, 4.8 g carbs, 3.1 g fat per 100 ml. Milk sugars are not free/added sugars.",
+          "sodiumMg": null,
+          "freeSugarG": 0,
+          "saturatedFatG": null,
+          "fibreG": 0,
+          "caffeineMg": null
+        }
+      ],
+      "workouts": [],
+      "notes": "Breakfast logged from description (no photos yet): whey protein, creatine and Amul lactose-free milk. Further meals will be added as they are logged during the day.",
+      "steps": null,
+      "sleepHours": null,
+      "sleepNotes": "",
+      "activityNotes": "",
+      "nutrientNotes": "Nutrient values below are incomplete for this day: the whey brand is unknown, so sodium and saturated fat are not estimated for the breakfast entries.",
+      "photos": []
+    },
+    {
       "date": "2026-11-11",
       "entries": [
         {
