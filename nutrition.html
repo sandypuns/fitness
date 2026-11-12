@@ -100,7 +100,7 @@ const wCards=(d.workouts||[]).map(x=>{
  else if(x.details||x.notes) h+='<div class="workout-src">'+(x.details||x.notes)+'</div>';
  return '<div class="workout-card">'+h+'</div>';
 }).join('');
-$('activity').innerHTML=(wCards||'<div class="workout-card"><span class="activity-label">Workout</span><b>Not logged yet</b><div class="activity-detail">Awaiting end-of-day update</div></div>')+[
+$('activity').innerHTML=(wCards||'<div class="workout-card"><span class="activity-label">Workout</span><div class="workout-title" style="margin-top:3px">Not logged yet</div><div class="activity-detail">Awaiting end-of-day update</div></div>')+[
  ['Steps',d.steps==null?'Not logged yet':fmt(d.steps)+' steps',d.steps==null?'Awaiting end-of-day update':'Daily step count'],
  ['Sleep',d.sleepHours==null?'Not logged yet':d.sleepHours+' hours',d.sleepNotes||'Sleep duration']
 ].map(([label,value,detail])=>'<div class="activity-card"><span class="activity-label">'+label+'</span><b>'+value+'</b><div class="activity-detail">'+detail+'</div></div>').join('');
