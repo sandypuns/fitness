@@ -161,10 +161,25 @@
           "saturatedFatG": 1.8,
           "fibreG": null,
           "caffeineMg": null
+        },
+        {
+          "meal": "Snack",
+          "item": "Homemade veg macaroni pasta — small plate",
+          "calories": 250,
+          "protein": 8,
+          "carbs": 38,
+          "fat": 7,
+          "confidence": "low",
+          "notes": "Photo estimate: small disposable plate of elbow macaroni tossed with bell peppers, broccoli, herbs and sesame; the user called it 'little'. Assumed about 120 g cooked pasta (about 190 kcal), a light vegetable mix, and about 1 tsp oil or butter. No cheese or creamy sauce visible.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         }
       ],
       "workouts": [],
-      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo. Further meals will be added as they are logged during the day.",
+      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Further meals will be added as they are logged during the day.",
       "steps": null,
       "sleepHours": 7,
       "sleepNotes": "Reported as 7 hours",
