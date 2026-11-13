@@ -176,6 +176,51 @@
           "saturatedFatG": null,
           "fibreG": null,
           "caffeineMg": null
+        },
+        {
+          "meal": "Dinner",
+          "item": "Chicken — 150 g, grilled/pan-seared",
+          "calories": 165,
+          "protein": 33,
+          "carbs": 0,
+          "fat": 4,
+          "confidence": "medium",
+          "notes": "Same preparation as yesterday's dinner. Weight basis was not specified today, so the estimate follows yesterday's confirmed 150 g raw (about 105-110 g cooked yield at 151 kcal, 30.5 g protein, 3.2 g fat per 100 g, USDA). If today's 150 g is the cooked weight, it would be about 227 kcal and 46 g protein.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Dinner",
+          "item": "Chipotle sauce — about 25 g (same as previously logged)",
+          "calories": 60,
+          "protein": 0,
+          "carbs": 4,
+          "fat": 5,
+          "confidence": "low",
+          "notes": "User said 'same sauce as yesterday'. The matching sauce in the diary is the chipotle glaze logged with this chicken-and-lettuce plate on Nov 11 (about 25 g); yesterday's dinner itself used butter. Brand and recipe unknown - sugar and oil vary widely.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Dinner",
+          "item": "Lettuce — about 100 g",
+          "calories": 15,
+          "protein": 1,
+          "carbs": 3,
+          "fat": 0,
+          "confidence": "medium",
+          "notes": "Photo estimate of the lettuce bed in the bowl; same reference as yesterday (about 15 kcal, 1 g protein, 3 g carbs per 100 g).",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         }
       ],
       "workouts": [
@@ -193,7 +238,7 @@
           "details": "From Fitbit Air screenshots: 56 min 25 sec, 399 kcal burned, average heart rate 146 bpm, cardio load 103, 88 zone minutes (daily zone goal completed), 0.7 mi distance; 6 min moderate and 42 min vigorous + peak (31 vigorous, 11 peak)."
         }
       ],
-      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Further meals will be added as they are logged during the day.",
+      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Dinner repeats yesterday's chicken-and-lettuce plate with the chipotle sauce estimate.",
       "steps": null,
       "sleepHours": 7,
       "sleepNotes": "Reported as 7 hours",
