@@ -25,6 +25,64 @@
   },
   "days": [
     {
+      "date": "2026-11-13",
+      "entries": [
+        {
+          "meal": "Breakfast",
+          "item": "Whey protein — 1.5 scoops",
+          "calories": 180,
+          "protein": 36,
+          "carbs": 3,
+          "fat": 2,
+          "confidence": "medium",
+          "notes": "Brand and scoop size not specified; estimate uses a typical 30 g scoop at about 120 kcal and 24 g protein. Generic whey estimate, not label-based.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Creatine — 1 serving",
+          "calories": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0,
+          "confidence": "high",
+          "notes": "Serving size not specified; plain creatine monohydrate has no meaningful calories or macronutrients.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Breakfast",
+          "item": "Amul Lactose Free Milk — 250 ml carton",
+          "calories": 148,
+          "protein": 8,
+          "carbs": 12,
+          "fat": 8,
+          "confidence": "high",
+          "notes": "Label-based: 59 kcal, 3 g protein, 4.8 g carbs, 3.1 g fat per 100 ml. Milk sugars are not free/added sugars.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        }
+      ],
+      "workouts": [],
+      "notes": "Breakfast logged from description (no photos yet): whey protein, creatine and lactose-free milk. Further meals will be added as they are logged during the day.",
+      "steps": null,
+      "sleepHours": 7,
+      "sleepNotes": "Reported as 7 hours",
+      "activityNotes": "Sleep logged; workout and steps not logged yet.",
+      "nutrientNotes": "Nutrient values below are incomplete for this day: the whey brand is unknown, so sodium and saturated fat are not estimated for the breakfast entries.",
+      "photos": []
+    },
+    {
       "date": "2026-11-12",
       "entries": [
         {
@@ -225,10 +283,10 @@
       ],
       "workouts": [],
       "notes": "Breakfast logged from description; lunch logged from a photo: uttapam, fried chicken, chicken curry and curd (photo estimates). Further meals will be added as they are logged during the day.",
-      "steps": null,
+      "steps": 4486,
       "sleepHours": 5.55,
       "sleepNotes": "Reported as 5 h 33 min",
-      "activityNotes": "Sleep logged; workout and steps not logged yet.",
+      "activityNotes": "Sleep and steps logged; workout not logged yet.",
       "nutrientNotes": "Nutrient values below are incomplete for this day: the whey brand is unknown, so sodium and saturated fat are not estimated for the breakfast entries; lunch entries are photo estimates, so sodium, saturated fat and fibre are not estimated for them; the dinner butter portion is assumed (about 5 g), not a confirmed weight.",
       "photos": [
         {
@@ -567,4 +625,4 @@
     ],
     "dailyWheyProtocol": "2 scoops daily: 1 scoop at breakfast + 1 scoop as the evening snack."
   }
-        }
+}
