@@ -236,6 +236,36 @@
           "saturatedFatG": null,
           "fibreG": null,
           "caffeineMg": null
+        },
+        {
+          "meal": "Snack",
+          "item": "Peach fruit yogurt — 100 g cup (label read)",
+          "calories": 104,
+          "protein": 3.6,
+          "carbs": 15.3,
+          "fat": 3.1,
+          "confidence": "high",
+          "notes": "Label read from the pack photo: 1 serving per pack at 100 g, so a full cup is 103.5 kcal (logged as 104), 3.6 g protein, 15.3 g carbs with 15.3 g total sugar of which 9.0 g added, and 3.1 g fat (saturated fat listed as under 1.5 g, sodium 21 mg). Brand reads as Milky Mist from the partial wordmark and droplet logo. Logged as the full cup.",
+          "sodiumMg": 21,
+          "freeSugarG": 9,
+          "saturatedFatG": 1.5,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Snack",
+          "item": "Whey protein — half scoop",
+          "calories": 60,
+          "protein": 12,
+          "carbs": 1,
+          "fat": 0.7,
+          "confidence": "medium",
+          "notes": "User confirmed adding half a scoop with the yogurt. Provisional generic estimate, halved from the standing breakfast entry (typical 30 g scoop at about 120 kcal and 24 g protein). Brand and scoop size still unconfirmed; mixed with water assumed. Becomes label-based once the whey label is shared.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
         }
       ],
       "workouts": [
@@ -253,7 +283,7 @@
           "details": "From Fitbit Air screenshots: 56 min 25 sec, 399 kcal burned, average heart rate 146 bpm, cardio load 103, 88 zone minutes (daily zone goal completed), 0.7 mi distance; 6 min moderate and 42 min vigorous + peak (31 vigorous, 11 peak)."
         }
       ],
-      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Dinner repeats yesterday's chicken-and-lettuce plate; the user confirmed the 150 g chicken is weighed raw like yesterday and, asked directly, affirmed the chipotle sauce (about 25 g estimate); a small butter pat (about 5 g, estimated amount) carries over from yesterday's confirmed preparation.",
+      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Dinner repeats yesterday's chicken-and-lettuce plate; the user confirmed the 150 g chicken is weighed raw like yesterday and, asked directly, affirmed the chipotle sauce (about 25 g estimate); a small butter pat (about 5 g, estimated amount) carries over from yesterday's confirmed preparation. Late-evening top-up confirmed by the user: a peach fruit yogurt cup (label read, one 100 g pack) and half a scoop of whey (provisional estimate), logged with the yogurt's label photo.",
       "steps": null,
       "sleepHours": 7,
       "sleepNotes": "Reported as 7 hours",
