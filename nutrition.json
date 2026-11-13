@@ -178,12 +178,26 @@
           "caffeineMg": null
         }
       ],
-      "workouts": [],
+      "workouts": [
+        {
+          "activity": "Boxing",
+          "durationMinutes": 56.4,
+          "energyKcal": 399,
+          "avgHeartRate": 146,
+          "cardioLoad": 103,
+          "zoneMinutes": 88,
+          "zoneModerateMin": 6,
+          "zoneVigorousPeakMin": 42,
+          "zoneGoalCompleted": true,
+          "source": "Fitbit Air screenshots · App-reported estimates",
+          "details": "From Fitbit Air screenshots: 56 min 25 sec, 399 kcal burned, average heart rate 146 bpm, cardio load 103, 88 zone minutes (daily zone goal completed), 0.7 mi distance; 6 min moderate and 42 min vigorous + peak (31 vigorous, 11 peak)."
+        }
+      ],
       "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Further meals will be added as they are logged during the day.",
       "steps": null,
       "sleepHours": 7,
       "sleepNotes": "Reported as 7 hours",
-      "activityNotes": "Sleep logged; workout and steps not logged yet.",
+      "activityNotes": "Boxing session logged from Fitbit screenshots shared in the chat. Today's step count has not been shared yet; sleep was reported as 7 hours.",
       "nutrientNotes": "Nutrient values below are incomplete for this day: the whey brand is unknown, so sodium and saturated fat are not estimated for the breakfast entries."
     },
     {
