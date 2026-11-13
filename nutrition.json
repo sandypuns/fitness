@@ -185,7 +185,7 @@
           "carbs": 0,
           "fat": 4,
           "confidence": "medium",
-          "notes": "Same preparation as yesterday's dinner. Weight basis was not specified today, so the estimate follows yesterday's confirmed 150 g raw (about 105-110 g cooked yield at 151 kcal, 30.5 g protein, 3.2 g fat per 100 g, USDA). If today's 150 g is the cooked weight, it would be about 227 kcal and 46 g protein.",
+          "notes": "User confirmed today's 150 g is weighed raw like yesterday ('all same as yesterday'). Same preparation as yesterday's dinner. The math: 150 g raw yields about 105-110 g cooked; USDA grilled skinless chicken breast is about 151 kcal, 30.5 g protein and 3.2 g fat per 100 g cooked (via nutri-db.com), which lands at the logged 165 kcal, 33 g protein and 4 g fat.",
           "sodiumMg": null,
           "freeSugarG": null,
           "saturatedFatG": null,
@@ -200,7 +200,7 @@
           "carbs": 4,
           "fat": 5,
           "confidence": "low",
-          "notes": "User said 'same sauce as yesterday'. The matching sauce in the diary is the chipotle glaze logged with this chicken-and-lettuce plate on Nov 11 (about 25 g); yesterday's dinner itself used butter. Brand and recipe unknown - sugar and oil vary widely.",
+          "notes": "User said 'same sauce as yesterday' and, asked whether he meant the chipotle one, replied 'all same as yesterday'. Nov 12's dinner as logged lists chicken, butter and lettuce without a sauce entry; the chipotle reference in the diary is the glaze logged with this chicken-and-lettuce plate on Nov 11 (about 25 g, about 60 kcal). Estimate uses about 25 g; brand and recipe unknown - sugar and oil vary widely.",
           "sodiumMg": null,
           "freeSugarG": null,
           "saturatedFatG": null,
@@ -238,7 +238,7 @@
           "details": "From Fitbit Air screenshots: 56 min 25 sec, 399 kcal burned, average heart rate 146 bpm, cardio load 103, 88 zone minutes (daily zone goal completed), 0.7 mi distance; 6 min moderate and 42 min vigorous + peak (31 vigorous, 11 peak)."
         }
       ],
-      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Dinner repeats yesterday's chicken-and-lettuce plate with the chipotle sauce estimate.",
+      "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Dinner repeats yesterday's chicken-and-lettuce plate; the user confirmed the 150 g chicken is weighed raw like yesterday and, asked directly, affirmed the chipotle sauce (about 25 g estimate).",
       "steps": null,
       "sleepHours": 7,
       "sleepNotes": "Reported as 7 hours",
