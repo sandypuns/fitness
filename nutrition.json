@@ -28,6 +28,36 @@
       "date": "2026-11-14",
       "entries": [
         {
+          "meal": "Lunch",
+          "item": "Hot Habanero Burrito — Chicken (California Burrito)",
+          "calories": 780,
+          "protein": 40,
+          "carbs": 93,
+          "fat": 26,
+          "confidence": "low",
+          "notes": "Estimated from the restaurant's app menu description (lightly toasted flour tortilla, cilantro rice, chipotle chicken, peri peri potato, pico de gallo, habanero sauce, creamy southwest sauce); the screenshots are menu reference images, not the actual meal. Component build-up cross-checked against the chain's FatSecret entries (Chili Chipotle Chicken Rice Bowl listed at 725 kcal). No published nutrition for this item; restaurant recipe and portion could reasonably swing it to about 650-900 kcal.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
+          "meal": "Lunch",
+          "item": "Chicken Tostada (California Burrito)",
+          "calories": 385,
+          "protein": 22,
+          "carbs": 27,
+          "fat": 18.5,
+          "confidence": "low",
+          "notes": "Estimated from the restaurant's app menu description (crispy flat tortilla, grilled BBQ chicken, pico de gallo, jalapenos, creamy southwest sauce); menu reference image, not the actual meal. No published nutrition for this item - the creamy southwest sauce portion is the main swing factor.",
+          "sodiumMg": null,
+          "freeSugarG": null,
+          "saturatedFatG": null,
+          "fibreG": null,
+          "caffeineMg": null
+        },
+        {
           "meal": "Drink",
           "item": "Sugarcane juice — 200 ml bottle (label read)",
           "calories": 150,
@@ -133,7 +163,7 @@
           "details": "From Fitbit Air screenshots: 1 hr 30 min starting 8:38 AM, marked manually logged in the app. 792 kcal burned (28% of daily goal), average heart rate 145 bpm, cardio load 145, 151 zone minutes (daily zone goal completed), 1.42 mi distance, and 3,467 steps during the session - session steps, not the daily count. Zone split: 16 min moderate and 1 hr 10 min vigorous + peak (70 min vigorous, 0 min peak)."
         }
       ],
-      "notes": "Day in progress. Morning cricket session logged from Fitbit screenshots. Post-cricket sugarcane juice logged from its bottle label (200 ml pack, no added sugar). Dinner: pan-fried fish fillet (250 g, species unstated), sautéed mushrooms and avocado toast, cooked with a user-specified tablespoon of butter.",
+      "notes": "Day in progress. Morning cricket session logged from Fitbit screenshots. Post-cricket sugarcane juice logged from its bottle label (200 ml pack, no added sugar). Lunch logged from the restaurant's app menu screenshots (California Burrito, Mahadevapura): a Hot Habanero Chicken Burrito and a Chicken Tostada, estimated from the menu descriptions since the images are menu references, not meal photos. Dinner: pan-fried fish fillet (250 g, species unstated), sautéed mushrooms and avocado toast, cooked with a user-specified tablespoon of butter.",
       "steps": null,
       "sleepHours": null,
       "sleepNotes": null,
@@ -905,4 +935,4 @@
     ],
     "dailyWheyProtocol": "2 scoops daily: 1 scoop at breakfast + 1 scoop as the evening snack."
   }
-}
+        }
