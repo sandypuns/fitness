@@ -35,9 +35,9 @@
           "carbs": 34.8,
           "fat": 0.6,
           "confidence": "high",
-          "notes": "Label read from the bottle photo: per 100 ml it lists 75 kcal, 0.58 g protein, 17.39 g carbs with 17.06 g total sugars and 0 g added sugar, 0.31 g fat and 6.84 mg sodium. The pack is one 200 ml serving, so the full bottle is logged: about 150 kcal and 34.8 g carbs, all sugars naturally occurring from the juice. Ingredients: sugarcane juice (98%), lemon, ginger. Brand not visible in the photo. Drank it after the cricket session.",
+          "notes": "Label read from the bottle photo: per 100 ml it lists 75 kcal, 0.58 g protein, 17.39 g carbs with 17.06 g total sugars and 0 g added sugar, 0.31 g fat and 6.84 mg sodium. The pack is one 200 ml serving, so the full bottle is logged: about 150 kcal and 34.8 g carbs. Added sugar is 0 g per the label, but the juice's natural sugars still count as free sugars under the WHO definition (sugars present in fruit juices are free sugars), so free sugar is recorded as the full 34.1 g. Ingredients: sugarcane juice (98%), lemon, ginger. Brand not visible in the photo. Drank it after the cricket session.",
           "sodiumMg": 13.7,
-          "freeSugarG": 0,
+          "freeSugarG": 34.1,
           "saturatedFatG": 0.4,
           "fibreG": null,
           "caffeineMg": null
