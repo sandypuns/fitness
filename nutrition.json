@@ -26,7 +26,23 @@
   "days": [
     {
       "date": "2026-11-14",
-      "entries": [],
+      "entries": [
+        {
+          "meal": "Drink",
+          "item": "Sugarcane juice — 200 ml bottle (label read)",
+          "calories": 150,
+          "protein": 1.2,
+          "carbs": 34.8,
+          "fat": 0.6,
+          "confidence": "high",
+          "notes": "Label read from the bottle photo: per 100 ml it lists 75 kcal, 0.58 g protein, 17.39 g carbs with 17.06 g total sugars and 0 g added sugar, 0.31 g fat and 6.84 mg sodium. The pack is one 200 ml serving, so the full bottle is logged: about 150 kcal and 34.8 g carbs, all sugars naturally occurring from the juice. Ingredients: sugarcane juice (98%), lemon, ginger. Brand not visible in the photo. Drank it after the cricket session.",
+          "sodiumMg": 13.7,
+          "freeSugarG": 0,
+          "saturatedFatG": 0.4,
+          "fibreG": null,
+          "caffeineMg": null
+        }
+      ],
       "workouts": [
         {
           "activity": "Cricket",
@@ -42,7 +58,7 @@
           "details": "From Fitbit Air screenshots: 1 hr 30 min starting 8:38 AM, marked manually logged in the app. 792 kcal burned (28% of daily goal), average heart rate 145 bpm, cardio load 145, 151 zone minutes (daily zone goal completed), 1.42 mi distance, and 3,467 steps during the session - session steps, not the daily count. Zone split: 16 min moderate and 1 hr 10 min vigorous + peak (70 min vigorous, 0 min peak)."
         }
       ],
-      "notes": "Day in progress. Morning cricket session logged from Fitbit screenshots; no meals logged yet.",
+      "notes": "Day in progress. Morning cricket session logged from Fitbit screenshots. Post-cricket sugarcane juice logged from its bottle label (200 ml pack, no added sugar).",
       "steps": null,
       "sleepHours": null,
       "sleepNotes": null,
