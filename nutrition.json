@@ -25,6 +25,31 @@
   },
   "days": [
     {
+      "date": "2026-11-14",
+      "entries": [],
+      "workouts": [
+        {
+          "activity": "Cricket",
+          "durationMinutes": 90,
+          "energyKcal": 792,
+          "avgHeartRate": 145,
+          "cardioLoad": 145,
+          "zoneMinutes": 151,
+          "zoneModerateMin": 16,
+          "zoneVigorousPeakMin": 70,
+          "zoneGoalCompleted": true,
+          "source": "Fitbit Air screenshots, manually logged session",
+          "details": "From Fitbit Air screenshots: 1 hr 30 min starting 8:38 AM, marked manually logged in the app. 792 kcal burned (28% of daily goal), average heart rate 145 bpm, cardio load 145, 151 zone minutes (daily zone goal completed), 1.42 mi distance, and 3,467 steps during the session - session steps, not the daily count. Zone split: 16 min moderate and 1 hr 10 min vigorous + peak (70 min vigorous, 0 min peak)."
+        }
+      ],
+      "notes": "Day in progress. Morning cricket session logged from Fitbit screenshots; no meals logged yet.",
+      "steps": null,
+      "sleepHours": null,
+      "sleepNotes": null,
+      "activityNotes": "Cricket session logged from Fitbit screenshots (a manually logged session in the app). Last night's sleep and today's step count have not been shared yet.",
+      "nutrientNotes": null
+    },
+    {
       "date": "2026-11-13",
       "entries": [
         {
@@ -284,10 +309,10 @@
         }
       ],
       "notes": "Breakfast logged from description and a photo: whey protein, creatine and a strong milk coffee (no sugar). The lactose-free milk carton initially logged was removed at the user's correction - he did not have it. Lunch added from a tray photo; the user's 'card' read as curd (Mother Dairy Classic cup visible). Afternoon Lay's pack logged from its label photo; a small homemade veg pasta plate added in the evening. Dinner repeats yesterday's chicken-and-lettuce plate; the user confirmed the 150 g chicken is weighed raw like yesterday and, asked directly, affirmed the chipotle sauce (about 25 g estimate); a small butter pat (about 5 g, estimated amount) carries over from yesterday's confirmed preparation. Late-evening top-up confirmed by the user: a peach fruit yogurt cup (label read, one 100 g pack) and half a scoop of whey (provisional estimate), logged with the yogurt's label photo.",
-      "steps": null,
+      "steps": 4217,
       "sleepHours": 7,
       "sleepNotes": "Reported as 7 hours",
-      "activityNotes": "Boxing session logged from Fitbit screenshots shared in the chat. Today's step count has not been shared yet; sleep was reported as 7 hours.",
+      "activityNotes": "Boxing session logged from Fitbit screenshots shared in the chat. Step count shared the next morning: 4,217; sleep was reported as 7 hours.",
       "nutrientNotes": "Nutrient values below are incomplete for this day: the whey brand is unknown, so sodium and saturated fat are not estimated for the breakfast entries."
     },
     {
