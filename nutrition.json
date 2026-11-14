@@ -50,7 +50,7 @@
           "carbs": 0,
           "fat": 4,
           "confidence": "medium",
-          "notes": "User-specified 250 g fillet. Species not stated and not identifiable with confidence from the photo, so this uses a generic lean white fish reference (tilapia/basa type, about 96 kcal, 21 g protein, 2 g fat per 100 g, USDA). Weight basis (raw vs cooked) not specified. If it is a fattier fish such as salmon, fat would rise by roughly 25-30 g and calories by about 250.",
+          "notes": "User-specified 250 g fillet, weight confirmed as raw by the user. Species not stated and not identifiable with confidence from the photo, so this uses a generic lean white fish reference (tilapia/basa type, about 96 kcal, 21 g protein, 2 g fat per 100 g raw, USDA). If it is a fattier fish such as salmon, fat would rise by roughly 25-30 g and calories by about 250.",
           "sodiumMg": null,
           "freeSugarG": null,
           "saturatedFatG": null,
